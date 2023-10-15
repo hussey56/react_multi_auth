@@ -12,7 +12,8 @@ const Login = () => {
     };
   
     const facebook = () => {
-      window.open("http://localhost:5000/auth/facebook", "_self");
+      // window.open("http://localhost:5000/auth/facebook", "_self");
+      alert("Only Available When Project is hosted with https ")
     };
   
     return (

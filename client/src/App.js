@@ -25,6 +25,8 @@ const App = () => {
         })
         .then((resObject) => {
           setUser(resObject.user);
+          console.log(resObject);
+
         })
         .catch((err) => {
           console.log(err);
