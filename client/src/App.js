@@ -7,10 +7,10 @@ import Navbar from './components/Navbar'
 import { Navigate, Route, Routes } from 'react-router-dom';
 const App = () => {
   const [user, setUser] = useState(null);
-
+const BACKEND_URL = process.env.BACKEND_URL;
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:5000/auth/login/success", {
+      fetch(`${BACKEND_URL}/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {

@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 
 const Navbar = ({ user }) => {
+  const BACKEND_URL = process.env.BACKEND_URL;
   const logout = () => {
-    window.open("http://localhost:5000/auth/logout", "_self");
+    window.open(`${BACKEND_URL}/auth/logout`, "_self");
   };
 
   return (
     <div className="navbar">
       <span className="logo">
         <Link className="link" to="/">
-          Lama App
+          Hassan App
         </Link>
       </span>
       {user ? (
